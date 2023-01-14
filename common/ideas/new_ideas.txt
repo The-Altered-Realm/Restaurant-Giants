@@ -1,0 +1,152 @@
+ideas = {
+
+	country = {
+		jim_murrel = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+				has_political_power > 150
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				
+			}
+		}
+		
+		matt_murrel = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+				has_political_power > 150
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.5
+			}
+		}
+		
+		Chad_murrel = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				or = {
+					tag = USA
+					tag = ENG
+					tag = CAN
+					tag = CHL
+					tag = ITA
+				}
+			}
+
+			available = {
+				
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.5
+			}
+		}
+		
+		Ben_murrel = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				or = {
+					tag = USA
+					tag = ENG
+					tag = CAN
+					tag = CHL
+					tag = ITA
+				}
+			}
+
+			available = {
+				
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.5
+			}
+		}
+		
+		Tyler_murrel = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				or = {
+					tag = USA
+					tag = ENG
+					tag = CAN
+					tag = CHL
+					tag = ITA
+				}
+			}
+
+			available = {
+				
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.5
+			}
+		}
+	}
+}
