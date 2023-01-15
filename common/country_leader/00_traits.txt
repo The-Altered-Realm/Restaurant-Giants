@@ -14,6 +14,30 @@
 
 leader_traits = {
 
+	penny_pincher = {
+		random = no 
+		economy_cost_factor = 0.5
+		political_advisor_cost_factor = 0.75 
+		trade_laws_cost_factor = 0.5
+		stability_factor = -0.02
+		army_morale_factor = -0.05 
+		political_power_gain = 0.50 
+		neutrality_acceptance = 30
+		democratic_acceptance = 30
+		fascism_acceptance = 30
+		communism_acceptance = -30
+	}
+
+	pessimistic = { 
+		random = no 
+		stability_factor = -0.05 
+		army_morale_factor = -0.1 
+		neutrality_acceptance = -15
+		democratic_acceptance = -25 
+		defensive_war_stability_factor = -0.05
+		offensive_war_stability_factor = 0.1
+	}
+
 	motherly_love = {
 		random = no
 		stability_factor = 0.03

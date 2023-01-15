@@ -68,7 +68,12 @@
  ITA_olive_garden:0 "Olive Gardeners"
  GER_wendys:0 "NSDWP"
  GER_wendys_long:0 "Nationalsozialistische Deutsche Wendy'spartei"
- 
+ BKI_mr_krabs:0 "Mr Krab's United Party"
+ BKI_squidward:0 "SPP" 
+ BKI_squidward_long:0 "Squid's Peoples Party"
+
+ #################################################################################################################################################################################
+
  CAN_democratic_party_long:0 "Liberal Party of Canada"
  CAN_fascism_party:0 "National Unity Party"
  CAN_fascism_party_long:0 "National Unity Party"
