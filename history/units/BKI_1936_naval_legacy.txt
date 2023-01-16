@@ -1,0 +1,51 @@
+﻿
+units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "The Grand Fleet of Bikini Bottom"
+		naval_base = 13045 # 
+		task_force = {
+			name = "United Islands Main"			
+			location = 13045 # 
+			ship = { name = "BBS Orca" definition = battle_cruiser equipment = { battle_cruiser_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "BBS Krab Mover 1" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ENG } } }
+			ship = { name = "BBS Krab Mover 2" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = JAP } } }
+			ship = { name = "BBS Krab Mover 3" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = FRA } } }
+			ship = { name = "BBS Krab Mover 4" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = USA } } }
+			ship = { name = "BBS Jellyfish 1" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ENG } } }
+		}
+		
+		task_force = {				
+			name = "United Islands Submarine Force"			
+			location = 13045 # 
+			ship = { name = "BBS Jellyfish 2" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+			ship = { name = "BBS Jellyfish 3" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+			ship = { name = "BBS Jellyfish 4" definition = submarine equipment = { submarine_1 = { amount = 1 owner = USA } } }
+			ship = { name = "BBS Jellyfish 5" definition = submarine equipment = { submarine_2 = { amount = 1 owner = USA } } }
+			ship = { name = "BBS Jellyfish 6" definition = submarine equipment = { submarine_2 = { amount = 1 owner = USA } } }
+		}				
+	}
+} 
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "BKI"
+		}
+		requested_factories = 2
+		progress = 0.44
+		amount = 20
+	}
+	add_equipment_production = {
+		equipment = {
+			type = light_cruiser_2
+			creator = "BKI"
+		}
+		requested_factories = 1
+		progress = 0.13
+		amount = 8
+	}
+}

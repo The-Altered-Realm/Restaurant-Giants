@@ -1,0 +1,24 @@
+﻿
+air_wings = {
+	
+	633 = {
+		fighter_equipment_0 =  {
+			owner = "ENG" 
+			amount = 8
+		}
+		fighter_equipment_1 = {
+			owner = "CHL" 
+			amount = 28
+		}
+		tac_bomber_equipment_0 = {
+			owner = "ENG" 
+			amount = 2
+		}
+		tac_bomber_equipment_1 = {
+			owner = "CHL" 
+			amount = 5
+		}
+	}
+}
+
+

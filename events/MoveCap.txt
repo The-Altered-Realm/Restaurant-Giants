@@ -1,0 +1,141 @@
+﻿###########################
+# Moving Capital Events
+###########################
+
+add_namespace = move.cap
+
+# New Peru Protests in Pastaza
+country_event = {
+	id = move.cap.1
+	title = "Armed Protests in Pastaza"
+	desc = ""
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = SOV
+	}
+	
+	immediate = {
+		set_capital = {state = 202}
+	}
+	
+	fire_only_once = no
+	
+	option = {
+		name = "In the name of KFC!"
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = move.cap.news.1
+			hours = 1
+		}
+	}
+}
+
+# Pastaza obtains sovereignty
+country_event = {
+	id = ecu.v.npr.2
+	title = "Ecuador granted Pastaza sovereignty"
+	desc = ecu.v.npr.2.d
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = NPR
+	}
+	
+	immediate = {
+		add_stability = 0.05
+	}
+	
+	option = {
+		name = "A big step towards prosperity!"
+		ai_chance = { factor = 100 }
+		add_research_slot = 1
+		ECU = { transfer_state = 490 }
+		set_technology = {
+			gw_artillery = 1
+			cv_early_fighter = 1
+			early_bomber = 1
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 600
+			producer = ECU
+		}
+		news_event = {
+			id = soam_news.1
+		}
+	}	
+	
+	fire_only_once = yes
+}
+
+# Ecuador Rejects Demands
+country_event = {
+	id = ecu.v.npr.3
+	title = "Ecuador Rejected Our Demands"
+	desc = ecu.v.npr.3.d:0
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = NPR
+	}
+	
+	immediate = {
+		add_war_support = 0.08
+	}
+	
+	fire_only_once = no
+	
+	option = {
+		name = "Sovereignty or death!"
+		ai_chance = { factor = 50 }
+		declare_war_on = {
+			type = annex_everything
+			target = ECU
+			generator = { 490, 910 }
+		}	
+	}
+	option = {
+		name = "We shall return."
+		ai_chance = { factor = 50 }
+		add_war_support = 0.03
+		add_stability = -0.02
+	}
+}
+
+# We Have Recieved Assistance
+country_event = {
+	id = ecu.v.npr.4
+	title = "We Have Recieved Assistance"
+	desc = ecu.v.npr.4.d:0
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = NPR
+	}
+
+	fire_only_once = no
+	
+	option = {
+		name = "Accept Assistance"
+		ai_chance = { factor = 100 }
+		add_tech_bonus = {
+			bonus = 0.1
+			uses = 1
+			category = industry
+		}
+	}
+	
+	option = {
+		name = "No thank you."
+		ai_chance = { factor = 0 }
+	}
+}

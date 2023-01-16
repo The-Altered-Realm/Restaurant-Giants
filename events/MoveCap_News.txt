@@ -1,0 +1,31 @@
+﻿###########################
+# Moving Capital News Events
+###########################
+
+add_namespace = move.cap.news
+
+# New England Cecedes
+news_event = {
+	id = move.cap.news.1
+	title = "The Soviet Union Has Moved It's Capital!"
+	desc = ""
+	picture = GFX_pastaza_gains_soverneignty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Interesting"
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "Why"
+		ai_chance = {
+			factor = 50
+		}
+	}
+}

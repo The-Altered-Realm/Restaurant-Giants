@@ -1,0 +1,67 @@
+
+state={
+	id=633
+	name="STATE_633"
+	manpower = 367490
+	state_category = town
+	resources = {
+		chromium = 16
+		steel = 3
+		oil = 1
+	}
+
+	history={
+		owner = BKI
+		add_core_of = FSM
+		add_core_of = BKI
+		add_claim_by = JAP
+		buildings = {
+			arms_factory = 2
+			industrial_complex = 2
+			dockyard = 1
+			infrastructure = 4
+			air_base = 2
+			13040 = {
+				naval_base = 1
+
+			}
+			13041 = {
+				naval_base = 3
+
+			}
+			13043 = {
+				naval_base = 1
+
+			}
+			13046 = {
+				naval_base = 1
+
+			}
+			1002 = {
+				naval_base = 1
+			}
+			13039 = {
+				naval_base = 1
+			}
+			13045 = {
+				naval_base = 7
+			}
+		}
+		victory_points = {
+			13045 5
+		}
+		victory_points = {
+			13041 2 
+		}
+		victory_points = {
+			13046 1 
+		}
+
+	}
+
+	provinces={
+		1002 13039 13040 13041 13042 13043 13044 13045 13046 
+	}
+
+	local_supplies=1.0 
+}
