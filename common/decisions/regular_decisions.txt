@@ -45,18 +45,17 @@ restauranting_giants = {
 		on_map_mode = decisions_view
 		
 		available = {
-			ruling_party = fascism
+			has_government = fascism
 			or = {
-				ruling_party = communism
+				has_government = communism
 			}
 			or = {
-				ruling_party = neutrality
+				has_government = neutrality
 		}
 
 		fire_only_once = no
 
 		visible = {
-			
 		}
 
 		cost = 5
@@ -72,6 +71,7 @@ restauranting_giants = {
 		
 		ai_will_do = {
 			factor = 0
+			}
 		}
 	}
 	
@@ -81,50 +81,26 @@ restauranting_giants = {
 		on_map_mode = decisions_view
 		
 		available = {
-			ruling_party = fascism
+			has_government = fascism
 			or = {
-				ruling_party = communism
+				has_government = democratic
 			}
 			or = {
-				ruling_party = neutrality
+				has_government = neutrality
 		}
 
 		fire_only_once = no
 
 		visible = {
-			tag = SOV
-			or = {
-				tag = CHL
-			}
-			or = {
-				tag = USA
-			}
-			or = {
-				tag = BKI
-			}
-			or = {
-				tag = ENG
-			}
-			or = {
-				tag = GER
-			}
-			or = {
-				tag = ITA
-			}
-			or = {
-				tag = CAN
-			}
-			or = {
-				tag = JAP
-			}
 		}
 
 		cost = 5
 
 		complete_effect = {
-			set_government = democratic
+			add_timed_idea = { idea = communism_drift  days = 32 }
+			set_government = communism
 			country_event = {
-				id = set.party.1
+				id = set.party.2
 				days = 1
 			}
 		}
@@ -140,50 +116,26 @@ restauranting_giants = {
 		on_map_mode = decisions_view
 		
 		available = {
-			ruling_party = fascism
+			has_government = democratic
 			or = {
-				ruling_party = communism
+				has_government = communism
 			}
 			or = {
-				ruling_party = neutrality
+				has_government = neutrality
 		}
 
 		fire_only_once = no
 
 		visible = {
-			tag = SOV
-			or = {
-				tag = CHL
-			}
-			or = {
-				tag = USA
-			}
-			or = {
-				tag = BKI
-			}
-			or = {
-				tag = ENG
-			}
-			or = {
-				tag = GER
-			}
-			or = {
-				tag = ITA
-			}
-			or = {
-				tag = CAN
-			}
-			or = {
-				tag = JAP
-			}
 		}
 
 		cost = 5
 
 		complete_effect = {
-			set_government = democratic
+			add_timed_idea = { idea = fascism_drift  days = 32 }
+			set_government = fascism
 			country_event = {
-				id = set.party.1
+				id = set.party.3
 				days = 1
 			}
 		}
@@ -199,50 +151,26 @@ restauranting_giants = {
 		on_map_mode = decisions_view
 		
 		available = {
-			ruling_party = fascism
+			ruling_party = democratic
 			or = {
 				ruling_party = communism
 			}
 			or = {
-				ruling_party = neutrality
+				ruling_party = fascism
 		}
 
 		fire_only_once = no
 
 		visible = {
-			tag = SOV
-			or = {
-				tag = CHL
-			}
-			or = {
-				tag = USA
-			}
-			or = {
-				tag = BKI
-			}
-			or = {
-				tag = ENG
-			}
-			or = {
-				tag = GER
-			}
-			or = {
-				tag = ITA
-			}
-			or = {
-				tag = CAN
-			}
-			or = {
-				tag = JAP
-			}
 		}
 
 		cost = 5
 
 		complete_effect = {
-			set_government = democratic
+			add_timed_idea = { idea = neutrality_drift  days = 32 }
+			set_government = neutrality
 			country_event = {
-				id = set.party.1
+				id = set.party.4
 				days = 1
 			}
 		}
