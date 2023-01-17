@@ -1,6 +1,4 @@
 ﻿l_english:
  ABILITY_TOOLTIP_NAME:0 "$NAME|H$"
- set.party.1.t:0 ""
- neg.v.usa.1.d:0 ""
- noam_news.1.d:0 ""
- neg.v.usa.2.d:0 ""
+ set.party.1.t:0 "Political Change in [From.GetName]!"
+ set.party.1.d:0 "[From.GetName] has decided to change in a democratic nation and has started publishing democratic propaganda."
