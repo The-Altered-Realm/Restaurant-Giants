@@ -63,6 +63,7 @@ restauranting_giants = {
 
 		complete_effect = {
 			set_government = democratic
+			add_timed_idea = { idea = democratic_drift  days = 32 }
 			country_event = {
 				id = set.party.1
 				days = 1
