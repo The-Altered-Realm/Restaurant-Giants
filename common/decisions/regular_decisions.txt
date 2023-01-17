@@ -37,10 +37,9 @@ restauranting_giants = {
 			factor = 10
 		}
 	}
-}
 	
 	
-	change_democratic = {
+	set_democratic = {
 
 		icon = GFX_decision_infiltrate_state
 		on_map_mode = decisions_view
@@ -54,7 +53,42 @@ restauranting_giants = {
 				ruling_party = neutrality
 		}
 
-		fire_only_once = yes
+		fire_only_once = no
+
+		visible = {
+			
+		}
+
+		cost = 5
+
+		complete_effect = {
+			set_government = democratic
+			country_event = {
+				id = set.party.1
+				days = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	set_communism = {
+
+		icon = GFX_decision_infiltrate_state
+		on_map_mode = decisions_view
+		
+		available = {
+			ruling_party = fascism
+			or = {
+				ruling_party = communism
+			}
+			or = {
+				ruling_party = neutrality
+		}
+
+		fire_only_once = no
 
 		visible = {
 			tag = SOV
@@ -79,14 +113,136 @@ restauranting_giants = {
 			or = {
 				tag = CAN
 			}
+			or = {
+				tag = JAP
+			}
 		}
 
 		cost = 5
 
 		complete_effect = {
+			set_government = democratic
 			country_event = {
-				id = set.par.1
-				days = 3
+				id = set.party.1
+				days = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	set_fascism = {
+
+		icon = GFX_decision_infiltrate_state
+		on_map_mode = decisions_view
+		
+		available = {
+			ruling_party = fascism
+			or = {
+				ruling_party = communism
+			}
+			or = {
+				ruling_party = neutrality
+		}
+
+		fire_only_once = no
+
+		visible = {
+			tag = SOV
+			or = {
+				tag = CHL
+			}
+			or = {
+				tag = USA
+			}
+			or = {
+				tag = BKI
+			}
+			or = {
+				tag = ENG
+			}
+			or = {
+				tag = GER
+			}
+			or = {
+				tag = ITA
+			}
+			or = {
+				tag = CAN
+			}
+			or = {
+				tag = JAP
+			}
+		}
+
+		cost = 5
+
+		complete_effect = {
+			set_government = democratic
+			country_event = {
+				id = set.party.1
+				days = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	set_neutrality = {
+
+		icon = GFX_decision_infiltrate_state
+		on_map_mode = decisions_view
+		
+		available = {
+			ruling_party = fascism
+			or = {
+				ruling_party = communism
+			}
+			or = {
+				ruling_party = neutrality
+		}
+
+		fire_only_once = no
+
+		visible = {
+			tag = SOV
+			or = {
+				tag = CHL
+			}
+			or = {
+				tag = USA
+			}
+			or = {
+				tag = BKI
+			}
+			or = {
+				tag = ENG
+			}
+			or = {
+				tag = GER
+			}
+			or = {
+				tag = ITA
+			}
+			or = {
+				tag = CAN
+			}
+			or = {
+				tag = JAP
+			}
+		}
+
+		cost = 5
+
+		complete_effect = {
+			set_government = democratic
+			country_event = {
+				id = set.party.1
+				days = 1
 			}
 		}
 		
