@@ -12,5 +12,30 @@ restauranting_giants = {
 		always = yes
 	}
 	visible = {
+		tag = SOV
+			or = {
+				tag = CHL
+			}
+			or = {
+				tag = USA
+			}
+			or = {
+				tag = BKI
+			}
+			or = {
+				tag = ENG
+			}
+			or = {
+				tag = GER
+			}
+			or = {
+				tag = ITA
+			}
+			or = {
+				tag = CAN
+			}
+			or = {
+				tag = JAP
+			}
 	}
 }

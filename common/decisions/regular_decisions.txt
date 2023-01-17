@@ -20,7 +20,7 @@ restauranting_giants = {
 		fire_only_once = yes
 
 		visible = {
-			original_tag = SOV
+			tag = SOV
 			has_government = communism
 		}
 
@@ -38,213 +38,144 @@ restauranting_giants = {
 		}
 	}
 	
-	pastaza_becomes_the_capital = {
-		
+	
+	set_democratic = {
+
 		icon = GFX_decision_infiltrate_state
+		on_map_mode = decisions_view
 		
 		available = {
-			NPR = { owns_state = 490 }
-			NPR = { controls_state = 490 }
-		}
-
-		fire_only_once = yes
-		days_re_enable = 31
-
-		visible = {
-			original_tag = NPR
-			909 = { is_core_of = NPR }
-			490 = { is_core_of = NPR }
-			NPR = { owns_state = 909 }
-			NPR = { owns_state = 490 }
-			NPR = { controls_state = 909 }
-			NPR = { controls_state = 490 }
-		}
-
-		cost = 25
-
-		complete_effect = {
-			set_capital = {state = 490}
-		}
-		
-		ai_will_do = {
-			factor = 100
-		}
-	}
-	
-	inheriting_the_union = {
-	
-		icon = GFX_decision_infiltrate_state
-		
-		available = {
-			NPR = { owns_state = 490 }
-			NPR = { controls_state = 909 }
-			date > 1943.12.31
-		}
-
-		fire_only_once = yes
-		days_re_enable = 31
-
-		visible = {
-			original_tag = NPR
-			909 = { is_core_of = NPR }
-			490 = { is_core_of = NPR }
-			NPR = { owns_state = 909 }
-			NPR = { owns_state = 490 }
-			NPR = { controls_state = 909 }
-			NPR = { controls_state = 490 }
 			has_government = fascism
-		}
-
-		cost = 25
-
-		complete_effect = {
-			retire_ideology_leader = fascism
-			create_country_leader = {
-				name = "Lius A. Flores"
-				desc = "Second leader of the Revolutionary Union political party"
-				picture = "gfx/leaders/NPR/Portrait_Lius_A_Flores.dds"
-				ideology = fascism_ideology
-				traits = { inheritor_of_the_union }
+			or = {
+				has_government = communism
 			}
-		}
-		
-		ai_will_do = {
-			factor = 0
-			modifier = {
-				has_government = fascism
-				factor = 100
-			}
-		}
-	}
-}
-
-new_english_republic = {
-
-	new_amsterdam_joins = {
-		
-		icon = GFX_decision_infiltrate_state
-		
-		available = {
-			has_stability > 0.7
-			has_war_support > 0.3
+			or = {
+				has_government = neutrality
 		}
 
 		fire_only_once = no
-		days_re_enable = 116
 
 		visible = {
-			original_tag = NEG
-			357 = { is_owned_by = NEG }
-			910 = { is_owned_by = NEG }
-			911 = { is_owned_by = NEG }
-			912 = { is_owned_by = NEG }
-			913 = { is_owned_by = NEG }
-			357 = { is_controlled_by = NEG }
-			910 = { is_controlled_by = NEG }
-			911 = { is_controlled_by = NEG }
-			912 = { is_controlled_by = NEG }
-			913 = { is_controlled_by = NEG }
-			has_government = democratic
 		}
 
-		cost = 35
+		cost = 5
 
 		complete_effect = {
-			add_stability = 0.02
+			set_government = democratic
+			add_timed_idea = { idea = democratic_drift  days = 32 }
 			country_event = {
-				id = neg.v.usa.1 
+				id = set.party.1
+				days = 1
 			}
 		}
 		
 		ai_will_do = {
-			factor = 55
-			modifier = {
-				has_government = democratic
-				factor = 90
-			}
-			modifier = {
-				has_government = communism
-				factor = 65
-			}
-			modifier = {
-				has_government = fascism
-				factor = 100
+			factor = 0
 			}
 		}
 	}
-}
-
-############################################################################
-#### ON MAP DECISIONS ALLOW YOU TO SHOW DECISION ICONS ON THE WORLD MAP ####
-############################################################################
-
-turkish_troubles = {
-	Integrating_Edirne = {
-
-		icon = GFX_decision_icon_default
-		on_map_mode = map_and_decisions_view
-		highlight_states = { state = 341 }
-		
-		available = {		#Conditions that will allow the player/AI to click the decision and execute its effect.
-			341 = { resistance_activity < 0.08 }
-			341 = { starting_compliance > 0.80 }
-		}
-		
-		fire_only_once = no
-		days_re_enable = 63
-
-		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
-			original_tag = GRE
-			341 = { is_owned_by = GRE }
-			341 = { is_controlled_by = GRE }
-		}		
-
-		cost = 50
-
-		complete_effect = {		#The effects to execute once the decision icon is clicked.
-			341 = { add_core_of = GRE }
-		}
-
-		ai_will_do = {
-			factor = 9
-		}
 	
-	}
-}
+	set_communism = {
 
-category_with_map_icon = {
-	on_map_decision = {
-
-		icon = GFX_decision_icon_default		#The left side icon to show for this decision.
-		on_map_mode = map_only		#Determiens if the decision should only show up as an icon on the world map or as a decision bar in the decision interface too.
-		highlight_states = { state = 490 }		#This is required if on_map_mode = map_only is used, will highlight the state and will make the decision icon appear above that state on the world map.
+		icon = GFX_decision_infiltrate_state
+		on_map_mode = decisions_view
 		
-		# CONDITIONS TO MAKE THIS DECISION/MISSION APPEAR AND EXECUTE
-		
-		available = {		#Conditions that will allow the player/AI to click the decision and execute its effect.
-		}
-		
-		fire_only_once = no		#If set to yes, the decision will only appear once, after execution will not appear again.
-		days_re_enable = 5	#The amount of days of days it will take for the decision to reappear. Not valid if fire_only_once is set to yes
-
-		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
-			ROOT = {
-				is_ai = no
+		available = {
+			has_government = fascism
+			or = {
+				has_government = democratic
 			}
-		}		
+			or = {
+				has_government = neutrality
+		}
 
-		cost = 10		#The cost to execute the decision, by default its political power.
+		fire_only_once = no
 
-		# EFFECTS OF THIS DECISION/MISSION
+		visible = {
+		}
 
-		complete_effect = {		#The effects to execute once the decision icon is clicked.
+		cost = 5
+
+		complete_effect = {
+			add_timed_idea = { idea = communism_drift  days = 32 }
+			set_government = communism
+			country_event = {
+				id = set.party.2
+				days = 1
+			}
 		}
 		
-		# AI LOGIC FOR THIS DECISION/MISSION
-
-		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+		ai_will_do = {
 			factor = 0
 		}
-	
 	}
-}
+	
+	set_fascism = {
+
+		icon = GFX_decision_infiltrate_state
+		on_map_mode = decisions_view
+		
+		available = {
+			has_government = democratic
+			or = {
+				has_government = communism
+			}
+			or = {
+				has_government = neutrality
+		}
+
+		fire_only_once = no
+
+		visible = {
+		}
+
+		cost = 5
+
+		complete_effect = {
+			add_timed_idea = { idea = fascism_drift  days = 32 }
+			set_government = fascism
+			country_event = {
+				id = set.party.3
+				days = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	set_neutrality = {
+
+		icon = GFX_decision_infiltrate_state
+		on_map_mode = decisions_view
+		
+		available = {
+			ruling_party = democratic
+			or = {
+				ruling_party = communism
+			}
+			or = {
+				ruling_party = fascism
+		}
+
+		fire_only_once = no
+
+		visible = {
+		}
+
+		cost = 5
+
+		complete_effect = {
+			add_timed_idea = { idea = neutrality_drift  days = 32 }
+			set_government = neutrality
+			country_event = {
+				id = set.party.4
+				days = 1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
