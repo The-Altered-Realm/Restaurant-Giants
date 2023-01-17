@@ -14,4 +14,3 @@ restauranting_giants = {
 	visible = {
 	}
 }
-}
