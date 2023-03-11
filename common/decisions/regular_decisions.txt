@@ -64,7 +64,7 @@ restauranting_giants = {
 			set_government = democratic
 			add_timed_idea = { idea = democratic_drift  days = 32 }
 			country_event = {
-				id = set.party.1
+				id = party.news.d
 				days = 1
 			}
 		}
@@ -87,8 +87,8 @@ restauranting_giants = {
 			}
 			or = {
 				has_government = neutrality
-		}
-
+			}
+	
 		fire_only_once = no
 
 		visible = {
@@ -100,7 +100,7 @@ restauranting_giants = {
 			add_timed_idea = { idea = communism_drift  days = 32 }
 			set_government = communism
 			country_event = {
-				id = set.party.2
+				id = party.news.c
 				days = 1
 			}
 		}
@@ -135,7 +135,7 @@ restauranting_giants = {
 			add_timed_idea = { idea = fascism_drift  days = 32 }
 			set_government = fascism
 			country_event = {
-				id = set.party.3
+				id = party.news.f
 				days = 1
 			}
 		}
@@ -170,7 +170,7 @@ restauranting_giants = {
 			add_timed_idea = { idea = neutrality_drift  days = 32 }
 			set_government = neutrality
 			country_event = {
-				id = set.party.4
+				id = party.news.n
 				days = 1
 			}
 		}
