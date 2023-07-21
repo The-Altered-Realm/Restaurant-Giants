@@ -1,0 +1,82 @@
+﻿###########################
+# Ecuador v New Peru Events
+###########################
+
+add_namespace = neg.v.usa
+
+# New Amsterdam joins New England
+country_event = {
+	id = neg.v.usa.1
+	title = "New Amsterdam Joins New England"
+	desc = neg.v.usa.1.d
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = USA
+	}
+	
+	immediate = {
+		add_stability = -0.02
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Only a small loss."
+		ai_chance = { factor = 100 }
+	}
+}
+
+# New England Independence
+country_event = {
+	id = neg.v.usa.2
+	title = "New English Independence"
+	desc = neg.v.usa.2.d
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = USA
+	}
+
+	fire_only_once = yes
+	
+	option = {
+		name = "What a shame."
+		ai_chance = { factor = 100 }
+	}
+}
+
+# We Have Recieved Assistance
+country_event = {
+	id = neg.v.usa.3
+	title = "We Have Recieved Assistance"
+	desc = neg.v.usa.3.d
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = NEG
+	}
+
+	fire_only_once = no
+	
+	option = {
+		name = "Accept Assistance"
+		ai_chance = { factor = 100 }
+		add_tech_bonus = {
+			bonus = 0.7
+			uses = 1
+			category = industry
+		}
+	}
+		
+	option = {
+		name = "No thank you."
+		ai_chance = { factor = 0 }
+	}
+}

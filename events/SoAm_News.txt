@@ -1,0 +1,69 @@
+﻿###########################
+# South America News Events
+###########################
+
+add_namespace = soam_news
+
+# Pastaza gains sovereignty
+news_event = {
+	id = soam_news.1
+	title = "New Peru's capital state gains sovereignty"
+	desc = soam_news.1.d
+	picture = GFX_pastaza_gains_soverneignty
+	
+	major = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We support New Peruvian prosperity."
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 50
+				has_government = fascism
+			}
+			modifier = {
+				factor = 10
+				has_government = neutrality
+			}
+		}
+		country_event = {
+			id = ecu.v.npr.4
+		}
+	}
+	
+	option = {
+		name = "Interesting."
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 50
+				has_government = fascism
+			}
+			modifier = {
+				factor = 90
+				has_government = neutrality
+			}
+		}
+	}
+}
+
+# Bolivia gives up Chaco
+news_event = {
+	id = soam_news.2
+	title = "Bolivia Gives Chaco Boreal To Paraguay"
+	desc = soam_news.2.d
+	picture = GFX_pastaza_gains_soverneignty
+	
+	major = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Interesting."
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

@@ -1,0 +1,406 @@
+﻿###########################
+# New Bolivia Events
+###########################
+
+add_namespace = new.bol
+
+# Demanding Chaco
+country_event = {
+	id = new.bol.1
+	title = "Ownership of Chaco Boreal"
+	desc = new.bol.1.d:0
+	picture = GFX_pastaza_gains_soverneignty
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = PAR
+		688 = { is_owned_by = BOL }
+		688 = { is_controlled_by = BOL }
+		neutrality < 0.5
+		has_war_support > 0.69
+		date > 1936.8.12
+		date < 1937.4.21
+	}
+	
+	immediate = {
+		add_stability = -0.02
+		add_war_support = 0.01
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Demand Chaco from Bolivia."
+		ai_chance = {
+			factor = 95
+			modifier = {
+				factor = 99
+				has_government = fascism
+			}
+			modifier = {
+				factor = 37
+				has_government = neutrality
+			}
+		}
+		add_stability = 0.02
+		country_event = {
+			id = new.bol.2
+		}
+	}
+	
+	option = {
+		name = "We shall stay at peace."
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1
+				has_government = fascism
+			}
+			modifier = {
+				factor = 63
+				has_government = neutrality
+			}
+		}
+		add_stability = -0.03
+		country_event = {
+			id = new.bol.1
+			days = 27
+			random_days = 22
+		}
+	}
+}
+
+# Paraguay demands Chaco
+country_event = {
+	id = new.bol.2
+	title = "Paraguay Demands Chaco"
+	desc = new.bol.d:0
+	picture = GFX_pastaza_gains_soverneignty
+	
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = BOL
+		688 = { is_owned_by = BOL }
+		688 = { is_controlled_by = BOL }
+	}
+
+	immediate = {
+		add_war_support = 0.05
+	}
+
+	fire_only_once = yes
+
+	option = {
+		name = "Reject Demands"
+		ai_chance = {
+			factor = 90
+		}
+		add_stability = 0.01
+		country_event = {
+			id = new.bol.3
+		}
+	}
+	
+	option = {
+		name = "Accept Demands"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+		}
+		add_stability = -0.03
+		country_event = {
+			id = new.bol.7
+			random_days = 3
+		}
+	}
+
+	option = {
+		name = "How dare they!"
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 10
+				has_government = fascism
+			}
+		}
+		add_stability = -0.06
+		add_political_power = -10
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 917
+				num_provinces = 2
+			}
+			defender = {
+				state = 688
+				num_provinces = 3
+			}
+		}
+	}
+}
+
+# Paraguay responds to rejection
+country_event = {
+	id = new.bol.3
+	title = "Bolivia Rejected Our Demands."
+	desc = new.bol.d:0
+	picture = GFX_pastaza_gains_soverneignty
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = PAR
+		688 = { is_owned_by = BOL }
+		688 = { is_controlled_by = BOL }
+	}
+	
+	immediate = {
+		add_war_support = 0.02
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "We must take it!"
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 95
+				has_government = fascism
+			}
+		}
+		add_stability = 0.01
+		add_political_power = -5
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 688
+				num_provinces = 3
+			}
+			defender = {
+				state = 917
+				num_provinces = 2
+			}
+		}
+
+	}
+	
+	option = {
+		name = "Stand Down"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 5
+				has_government = fascism
+			}
+		}
+		add_stability = -0.02
+		country_event = {
+			id = new.bol.4
+			days = 2
+		}
+	}
+}
+
+
+# Paraguay stands down
+country_event = {
+	id = new.bol.4
+	title = "Paraguay Stands Down"
+	desc = new.bol.4.d:0
+	picture = GFX_pastaza_gains_soverneignty
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = BOL
+	}
+
+	immediate = {
+		
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Peace to Bolivia."
+		ai_chance = {
+			factor = 100
+		}
+		add_stability = 0.01
+	}
+}
+
+#
+country_event = {
+	id = new.bol.5
+	title = "Coreship of Arequipa"
+	desc = new.bol.5.d:0
+	picture = GFX_pastaza_gains_soverneignty
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = BOL
+		688 = { is_owned_by = BOL }
+		487 = { is_owned_by = BOL }
+		302 = { is_owned_by = BOL }
+		OR = {
+			487 = { is_owned_by = BOL }
+			688 = { is_owned_by = BOL }
+			688 = { is_controlled_by = BOL }
+			302 = { is_controlled_by = BOL }
+		}
+		neutrality < 0.9
+		NOT = {
+			has_stability < 0.7
+			has_war_support < 0.2
+		}
+		
+	}
+
+	immediate = {
+		
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Build Support"
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 95
+				has_government = fascism
+			}
+		}
+		add_political_power = -10
+		country_event = {
+			id = new.bol.6
+			days = 46
+		}
+	}
+	
+	option = {
+		name = "Postpone"
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 5
+				has_government = fascism
+			}
+		}
+		country_event = {
+			id = new.bol.5
+			days = 122
+			random_days = 30
+		}
+	}
+	
+	option = {
+		name = "We shoudn't."
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+		}
+	}
+}
+
+#
+country_event = {
+	id = new.bol.6
+	title = "We have obtained coreship of Arequipa."
+	desc = new.bol.6.d:0
+	picture = GFX_pastaza_gains_soverneignty
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = BOL
+	}
+
+	immediate = {
+		
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Rightfully so."
+		ai_chance = {
+			factor = 100
+		}
+		add_state_core = 492
+		add_stability = 0.03
+		add_war_support = 0.01
+	}
+}
+
+# 
+country_event = {
+	id = new.bol.7
+	title = "Bolivia Accepts!"
+	desc = new.bol.7.d:0
+	picture = GFX_pastaza_gains_soverneignty
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = PAR
+	}
+
+	immediate = {
+		set_state_owner = 688
+		set_state_controller = 688
+	}
+	
+	fire_only_once = yes
+
+	option = {
+		name = "Obtain Coreship"
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 70
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 90
+				has_government = democratic
+			}
+		}
+		news_event = {
+			id = soam_news.2
+			hours = 3
+		}
+		add_political_power = -25
+		add_state_core = 688
+	}
+	
+	option = {
+		name = "Do Not Obtain Coreship"
+		ai_chance = {
+			factor = 0
+				modifier = {
+					factor = 30
+					has_government = neutrality
+				}
+				modifier = {
+					factor = 10
+					has_government = democratic
+				}
+		}
+		news_event = {
+			id = soam_news.2
+			hours = 3
+		}
+	}
+}

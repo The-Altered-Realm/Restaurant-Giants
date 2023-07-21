@@ -1,0 +1,167 @@
+###########################
+# New USA Events
+###########################
+
+add_namespace = new.usa
+
+# Alcohol Legislation
+country_event = {
+	id = new.usa.1
+	title = "Calls For Reform on Alcohol Legislation"
+	desc = new.usa.1.d
+	picture = GFX_mussolini_assassinated
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = USA
+		date > 1936.1.16
+		or {
+			has_idea = no_alcohol_prohibition
+			has_idea = low_alcohol_prohibition
+			has_idea = high_alcohol_prohibition
+		}
+	}
+	
+	immediate = {
+		
+	}
+	
+	fire_only_once = no
+	
+	option = {
+		name = "Remove All Restrictions on Alcohol"
+		ai_chance = { factor = 77 }
+		add_stability = 0.01
+		add_ideas = no_alcohol_prohibition
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = -0.02
+		}
+		country_event = {
+			id = new.usa.1
+			days = 730
+		}
+	}
+	option = {
+		name = "Continue Current Restrictions"
+		ai_chance = { factor = 20 }
+		country_event = {
+			id = new.usa.1
+			days = 365
+		}
+	}
+	option = {
+		name = "Crack Down on All Alcohol Use"
+		ai_chance = { factor = 3 }
+		add_ideas = high_alcohol_prohibition
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = 0.04
+		}
+		country_event = {
+			id = new.usa.1
+			days = 730
+		}
+	}
+}
+
+# End of alcoholism
+country_event = {
+	id = new.usa.2
+	title = "Decrease in Alcoholism"
+	desc = new.usa.2.d
+	picture = GFX_mussolini_assassinated
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = USA
+		has_stability > 0.75
+		date > 1946.1.16
+		has_war = no
+		or {
+			has_idea = no_alcohol_prohibition
+			has_idea = low_alcohol_prohibition
+			has_idea = high_alcohol_prohibition
+		}
+	}
+	
+	immediate = {
+		remove_ideas = {
+			no_alcohol_prohibition
+			low_alcohol_prohibition
+			high_alcohol_prohibition
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "We shall continue to prosper."
+		ai_chance = { factor = 7 }
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = -0.01
+		}
+	}
+	option = {
+		name = "We are awake and sober."
+		ai_chance = { factor = 18 }
+	}
+	option = {
+		name = "We have left this debauchery, and shall be filled with the Spirit."
+		ai_chance = { factor = 75 }
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = 0.01
+		}
+	}
+	
+}
+
+# Succesful missionary efforts
+country_event = {
+	id = new.usa.3
+	title = "Our federally supported missionary efforts in _ have proven successful!"
+	desc = new.usa.3.d
+	picture = GFX_mussolini_assassinated
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = USA
+		
+	}
+	
+	immediate = {
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = 0.01
+		}
+	}
+	
+	fire_only_once = no
+	
+	option = {
+		name = "Convert To Standard Puppet State"
+		ai_chance = { factor = 99 }
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = -0.05
+		}
+	}
+	option = {
+		name = "Maintain As FMP State"
+		ai_chance = { factor = 1 }
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = 0.04
+		}
+	}
+	option = {
+		name = "Grant Them Full Autonomy"
+		ai_chance = { factor = 0 }
+	}
+}
+

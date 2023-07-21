@@ -1,0 +1,58 @@
+﻿###########################
+# North America News Events
+###########################
+
+add_namespace = noam_news
+
+# New England Cecedes
+news_event = {
+	id = noam_news.1
+	title = "New English Independence"
+	desc = noam_news.1.d
+	picture = GFX_pastaza_gains_soverneignty
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We support New English properity."
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 35
+				has_government = democratic
+			}
+			modifier = {
+				factor = 15
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 5
+				has_government = communism
+			}
+		}
+		country_event = {
+			id = neg.v.usa.2
+		}
+	}
+	
+	option = {
+		name = "Interesting."
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 65
+				has_government = democratic
+			}
+			modifier = {
+				factor = 85
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 95
+				has_government = communism
+			}
+		}
+	}
+}

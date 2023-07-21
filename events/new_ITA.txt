@@ -1,0 +1,66 @@
+###########################
+# New Italy Events
+###########################
+
+add_namespace = new.ita
+
+# 
+country_event = {
+	id = new.ita.1
+	title = "Mussolini Assassinated!"
+	desc = new.ita.1.d
+	picture = GFX_mussolini_assassinated
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = ITA
+		has_stability < 0.32
+		has_war_support < 0.48
+		date > 1939.11.20
+		has_offensive_war = yes
+		ITA_benito_mussolini = { is_country_leader = yes }
+	}
+	
+	immediate = {
+		kill_country_leader = yes
+		ITA_grand_council = { promote_character = yes }
+		add_stability = 0.03
+		add_war_support = -0.02
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "How unfortunate."
+		ai_chance = { factor = 100 }
+	}
+}
+
+# We Have Recieved Assistance
+country_event = {
+	id = new.ita.2
+	title = "We Have Recieved Assistance"
+	desc = new.ita.2.d
+	picture = GFX_report_event_protest_in_pastaza
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = ITA
+	}
+
+	fire_only_once = no
+	
+	option = {
+		name = "Accept Assistance"
+		ai_chance = { factor = 100 }
+		add_political_power = 5
+		add_manpower = 12000
+	}
+	
+	option = {
+		name = "No, thank you."
+		ai_chance = { factor = 0 }
+	}
+}

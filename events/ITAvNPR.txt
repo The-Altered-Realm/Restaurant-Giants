@@ -1,0 +1,99 @@
+﻿###########################
+# Italy v New Peru Events
+###########################
+
+add_namespace = ita.v.npr
+
+# Italy Finishes New Peru Focus
+country_event = {
+	id = ita.v.npr.1
+	title = "Italy Reaches Out To Us!"
+	desc = ita.v.npr.1.d
+	picture = GFX_category_image_ITAvNPR
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = NPR
+		has_government = fascism
+	}
+	
+	immediate = {
+		add_opinion_modifier = { target = ITA modifier = large_increase }
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Wonderful!"
+		ai_chance = { factor = 98 }
+		add_stability = 0.03
+		add_war_support = 0.05
+		country_event = { id = ita.v.npr.2 }
+	}
+	option = {
+		name = "We do not need them."
+		ai_chance = { factor = 2 }
+		add_opinion_modifier = { target = ITA modifier = small_decrease }
+		add_stability = -0.05
+		country_event = { id = ita.v.npr.3 }
+	}
+}
+
+# New Peru Accepts
+country_event = {
+	id = ita.v.npr.2
+	title = "New Peru Accepts Diplomacy"
+	desc = ita.v.npr.2.d
+	picture = GFX_category_image_ITAvNPR
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = ITA
+	}
+	
+	immediate = {
+		add_opinion_modifier = { target = NPR modifier = large_increase }
+		GER = {
+			add_opinion_modifier = { target = NPR modifier = small_increase }
+		}
+		NPR = {
+			add_opinion_modifier = { target = GER modifier = small_increase }
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "Good"
+		ai_chance = { factor = 100 }
+		add_stability = 0.01
+	}
+}
+
+# New Peru Rejects
+country_event = {
+	id = ita.v.npr.3
+	title = "New Peru Declines Diplomacy"
+	desc = ita.v.npr.3.d
+	picture = GFX_category_image_ITAvNPR
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = ITA
+	}
+	
+	immediate = {
+		
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = "What a Shame!"
+		ai_chance = { factor = 100 }
+	}
+}
+

@@ -1,0 +1,74 @@
+﻿###########################
+# Europe News Events
+###########################
+
+add_namespace = euro_news
+
+# 
+news_event = {
+	id = euro_news.1
+	title = "Death of Mussolini"
+	desc = euro_news.1.d
+	picture = GFX_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Interesting."
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 5
+				original_tag = GER
+				is_in_faction_with = ITA
+				has_manpower > 109999
+			}
+			modifier = {
+				factor = 40
+				is_in_faction_with = ITA
+				has_manpower > 109999
+			}
+			modifier = {
+				factor = 93
+				has_government = fascism
+				NOT = { is_in_faction_with = ITA }
+				has_manpower > 159999
+			}
+		}
+	}
+	
+	option = {
+		name = "We send our regards. (Donate 12000 Soldiers)"
+		ai_chance = {
+			factor = 0
+			modifier = {
+				factor = 95
+				original_tag = GER
+				is_in_faction_with = ITA
+				has_manpower > 109999
+			}
+			modifier = {
+				factor = 60
+				is_in_faction_with = ITA
+				has_manpower > 109999
+			}
+			modifier = {
+				factor = 7
+				has_government = fascism
+				NOT = { is_in_faction_with = ITA }
+				has_manpower > 159999
+			}
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = ITA
+			value = 5
+		}
+		add_manpower = -12000
+		country_event = {
+			id = new.ita.2
+		}
+	}
+}
