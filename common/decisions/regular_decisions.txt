@@ -1,0 +1,274 @@
+#####################################################################################################################
+# COMMENTS HAVE BEEN INCLUDED FOR SAKE OF EXPLANATION, CAN BE REMOVED #
+# ID's must not include spaces!
+# Decisions MUST be visible for the AI to execute them, if in doubt, switch tag to the AI country and check if they can see/execute the mission.
+#####################################################################################################################
+Legacy_of_New_Peru = {
+	
+	sovereignty_of_pastaza = {
+
+		icon = GFX_decision_infiltrate_state
+		on_map_mode = map_only
+		highlight_states = { state = 490 }
+		
+		available = {
+			fascism > 0.75
+			has_stability > 0.55
+			has_war_support > 0.5
+			army_manpower_in_state = {
+				type = infantry
+				amount > 3999
+				state = 909
+			}
+			has_government = fascism
+		}
+
+		fire_only_once = no
+		days_re_enable = 24
+
+		visible = {
+			original_tag = NPR
+			ECU = { owns_state = 490 }
+			ECU = { controls_state = 490 }
+			490 = { is_core_of = NPR }
+			909 = { is_core_of = NPR }
+			NPR = { owns_state = 909 }
+			NPR = { controls_state = 909 }
+		}
+
+		cost = 25
+
+		complete_effect = {
+			country_event = {
+				id = ecu.v.npr.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = fascism
+				factor = 98
+			}
+		}
+	}
+	
+	npr_dictatorship = {
+
+		icon = GFX_decision_infiltrate_state
+		
+		available = {
+			fascism > 0.89
+			has_stability > 0.55
+			has_government = fascism
+		}
+
+		fire_only_once = no
+		days_re_enable = 125
+
+		visible = {
+			original_tag = NPR
+			909 = { is_core_of = NPR }
+			490 = { is_core_of = NPR }
+			NPR = { owns_state = 909 }
+			NPR = { owns_state = 490 }
+			NPR = { controls_state = 909 }
+			NPR = { controls_state = 490 }
+		}
+
+		cost = 25
+
+		complete_effect = {
+			set_politics = {
+				elections_allowed = yes
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = fascism
+				factor = 98
+			}
+		}
+	}
+	
+	pastaza_becomes_the_capital = {
+		
+		icon = GFX_decision_infiltrate_state
+		
+		available = {
+			NPR = { owns_state = 490 }
+			NPR = { controls_state = 490 }
+		}
+
+		fire_only_once = yes
+		days_re_enable = 31
+
+		visible = {
+			original_tag = NPR
+			909 = { is_core_of = NPR }
+			490 = { is_core_of = NPR }
+			NPR = { owns_state = 909 }
+			NPR = { owns_state = 490 }
+			NPR = { controls_state = 909 }
+			NPR = { controls_state = 490 }
+		}
+
+		cost = 10
+
+		complete_effect = {
+			set_capital = {state = 490}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	inheriting_the_union = {
+	
+		icon = GFX_decision_infiltrate_state
+		
+		available = {
+			NPR = { owns_state = 490 }
+			NPR = { controls_state = 909 }
+			date > 1943.12.31
+		}
+
+		fire_only_once = yes
+		days_re_enable = 31
+
+		visible = {
+			original_tag = NPR
+			909 = { is_core_of = NPR }
+			490 = { is_core_of = NPR }
+			NPR = { owns_state = 909 }
+			NPR = { owns_state = 490 }
+			NPR = { controls_state = 909 }
+			NPR = { controls_state = 490 }
+			has_government = fascism
+		}
+
+		cost = 5
+
+		complete_effect = {
+			retire_ideology_leader = fascism
+			create_country_leader = {
+				name = "Lius A. Flores"
+				desc = "Second leader of the Revolutionary Union political party"
+				picture = "gfx/leaders/NPR/Portrait_Lius_A_Flores.dds"
+				ideology = fascism_ideology
+				traits = { inheritor_of_the_union }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_government = fascism
+				factor = 85
+			}
+		}
+	}
+}
+
+new_english_republic = {
+
+	new_amsterdam_joins = {
+		
+		icon = GFX_decision_infiltrate_state
+		
+		available = {
+			has_stability > 0.7
+			has_war_support > 0.3
+		}
+
+		fire_only_once = no
+		days_re_enable = 116
+
+		visible = {
+			original_tag = NEG
+			357 = { is_owned_by = NEG }
+			910 = { is_owned_by = NEG }
+			911 = { is_owned_by = NEG }
+			912 = { is_owned_by = NEG }
+			913 = { is_owned_by = NEG }
+			357 = { is_controlled_by = NEG }
+			910 = { is_controlled_by = NEG }
+			911 = { is_controlled_by = NEG }
+			912 = { is_controlled_by = NEG }
+			913 = { is_controlled_by = NEG }
+			has_government = democratic
+		}
+
+		cost = 35
+
+		complete_effect = {
+			add_stability = 0.02
+			country_event = {
+				id = neg.v.usa.1 
+			}
+		}
+		
+		ai_will_do = {
+			factor = 55
+			modifier = {
+				has_government = democratic
+				factor = 90
+			}
+			modifier = {
+				has_government = communism
+				factor = 65
+			}
+			modifier = {
+				has_government = fascism
+				factor = 100
+			}
+		}
+	}
+}
+
+############################################################################
+#### ON MAP DECISIONS ALLOW YOU TO SHOW DECISION ICONS ON THE WORLD MAP ####
+############################################################################
+
+turkish_troubles = {
+	Integrating_Edirne = {
+
+		icon = GFX_decision_icon_default
+		on_map_mode = map_and_decisions_view
+		highlight_states = { state = 341 }
+		
+		available = {		#Conditions that will allow the player/AI to click the decision and execute its effect.
+			controls_state = 341
+			core_resistance = {
+			 occupied_country_tag = TUR
+				value < 8
+			}
+			core_compliance = {
+				occupied_country_tag = ITA
+				value > 80
+			}
+		}
+		
+		fire_only_once = no
+		days_re_enable = 63
+
+		visible = {		#Conditions to make this decision visible, can be left blank to make it always appear.
+			tag = GRE
+			owns_state = 341
+		}		
+
+		cost = 50
+
+		complete_effect = {		#The effects to execute once the decision icon is clicked.
+			add_state_core = 341
+		}
+
+		ai_will_do = {
+			factor = 9
+		}
+	
+	}
+}

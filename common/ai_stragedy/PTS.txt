@@ -1,0 +1,121 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+ai_strategy = {
+	type = befriend
+	id = "GRE"
+	value = 60
+	}
+ai_strategy = {
+	type = befriend
+	id = "TUR"
+	value = 45
+}
+ai_strategy = {
+	type = alliance
+	id = "GRE"
+	value = 40
+	}
+ai_strategy = {
+	type = alliance
+	id = "TUR"
+	value = 35
+}
+ai_strategy = {
+	type = support
+	id = "GRE"
+	value = 10
+}
+ai_strategy = {
+	type = support
+	id = "TUR"
+	value = 25
+}
+ai_strategy = {
+    type = diplo_action_acceptance
+    id = "GRE"
+    value = 70
+}
+ai_strategy = {
+    type = diplo_action_acceptance
+    id = "TUR"
+    value = 65
+}
+
+
+GRE = {
+	ai_strategy = {
+	type = befriend
+	id = "PTS"
+	value = 90
+}
+ai_strategy = {
+	type = alliance
+	id = "PTS"
+	value = 60
+}
+ai_strategy = {
+	type = support
+	id = "PTS"
+	value = 50
+}
+ai_strategy = {
+    type = diplo_action_desire
+    id = "PTS"
+    value = 80
+}
+ai_strategy = {
+    type = diplo_action_acceptance
+    id = "PTS"
+    value = 45
+}
+}
+
+TUR = {
+	ai_strategy = {
+	type = befriend
+	id = "PTS"
+	value = 50
+}
+ai_strategy = {
+	type = alliance
+	id = "PTS"
+	value = 60
+}
+	ai_strategy = {
+	type = conquer
+	id = "PTS"
+	value = 35
+}
+ai_strategy = {
+	type = consider_weak
+	id = "PTS"
+	value = 70
+}
+ai_strategy = {
+    type = diplo_action_desire
+    id = "PTS"
+    value = 70
+}
+}
+
+SOV = {
+	ai_strategy = {
+	type = conquer
+	id = "PTS"
+	value = 20
+}
+ai_strategy = {
+    type = diplo_action_desire
+    id = "PTS"
+    value = 45
+}

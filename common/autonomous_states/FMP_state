@@ -1,0 +1,53 @@
+autonomy_state = {
+	id = autonomy_FMP_state
+	
+	use_overlord_color = no
+	
+	min_freedom_level = 0.65
+	
+	rule = {
+		can_not_declare_war = no
+		can_be_called_to_war = yes
+		can_decline_call_to_war = yes
+		units_deployed_to_overlord = no
+		can_be_spymaster = yes
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.0
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 0.5
+		overlord_trade_cost_factor = -0.2
+		cic_to_overlord_factor = 0.0
+		mic_to_overlord_factor = 0.0
+		peace_score_ratio_transferred_to_overlord = 0.1
+		add_power_balance_value = {
+			id = USA_values_power_balance
+			value = 0.01
+		}
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.1
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		tag = USA
+	}
+	
+	can_take_level = {
+		#trigger here
+	}
+
+	can_lose_level = {
+		#trigger here
+	}
+}

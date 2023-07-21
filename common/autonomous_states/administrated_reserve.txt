@@ -1,0 +1,51 @@
+autonomy_state = {
+	id = autonomy_administrated_reserve
+	
+	use_overlord_color = yes
+
+	min_freedom_level = 0.3
+
+	rule = {
+		can_join_opposite_factions = yes
+		can_only_justify_war_on_threat_country = no
+		can_decline_call_to_war = no
+        units_deployed_to_overlord = no
+		can_force_government = yes
+		can_boost_other_ideologies = no
+		can_create_factions = yes
+	}
+	
+	modifier = {
+		research_sharing_per_country_bonus_factor = 0.20
+		cic_to_overlord_factor = 0.0
+		mic_to_overlord_factor = 0.0
+		autonomy_manpower_share = 0.0
+		overlord_trade_cost_factor = -0.50
+        can_master_build_for_us = 1
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0
+	}
+
+	allowed = {
+		OVERLORD = {
+			or = {
+				has_government = neutrality
+				has_government = democratic
+			}
+		}
+	}
+	
+	can_take_level = {
+		always = no
+	}
+
+	can_lose_level = {
+		always = no
+	}
+}

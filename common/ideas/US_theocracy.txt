@@ -1,0 +1,273 @@
+ideas = {
+
+	country = {
+		
+		nation_of_the_new_testament = {
+			
+			allowed = {
+				is_major = yes
+				has_idea = biblical_constitution
+			}
+			
+			available = {
+				any_other_country = {
+					not = {
+						has_idea = nation_of_the_new_testament
+					}
+				}
+			}
+			
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -50
+
+			picture = generic_pp_unity_bonus
+			
+			rule = {
+				can_create_factions = yes
+				can_join_opposite_factions = yes
+				can_declare_war_on_same_ideology = yes
+				can_boost_other_ideologies = yes
+				can_puppet = yes
+			}
+			modifier = {
+				ai_badass_factor = 0.1 # cares for 10% of normal threat
+				ai_desired_divisions_factor = -0.25
+				justify_war_goal_time = -0.05
+				fascism_acceptance = -5
+				neutrality_acceptance = 10
+				drift_defence_factor = 0.1
+				army_core_attack_factor = 0.01
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					fascism_acceptance = -15
+					neutrality_acceptance = 15
+					communism_acceptance = 15
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					democratic_acceptance = 15
+					communism_acceptance = 15
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					fascism_acceptance = -15
+					democratic_acceptance = 15
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					fascism_acceptance = -15
+					democratic_acceptance = 15
+					neutrality_acceptance = -5
+				}
+			}
+		}
+		
+		biblical_constitution = {
+			picture = biblical_constitution
+			
+			allowed = {
+				always = yes
+			}
+
+			available = {
+				always = yes
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1200
+			
+			modifier = {
+				generate_wargoal_tension = 0.05
+				political_power_factor = -0.01
+				justify_war_goal_time = 0.15
+				send_volunteers_tension = -0.05
+				ai_desired_divisions_factor = 0.75
+				drift_defence_factor = 0.15
+				rmy_core_defence_factor = 0.01
+			}
+		}
+		
+		no_alcohol_prohibition = {
+			picture = usa_no_alcohol_prohibition
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+				always = yes
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1200
+			
+			modifier = {
+				conscription_factor = -0.005
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		
+		low_alcohol_prohibition = {
+			picture = usa_low_alcohol_prohibition
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+				always = yes
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1200
+			
+			modifier = {
+				political_power_cost = 0.03
+				stability_factor = -0.03
+				production_factory_max_efficiency_factor = -0.03
+			}
+		}
+		
+		high_alcohol_prohibition = {
+			picture = usa_high_alcohol_prohibition
+			
+			allowed = {
+				tag = USA
+			}
+
+			available = {
+				always = yes
+			}
+
+			cancel = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1200
+			
+			modifier = {
+				political_power_cost = 0.08
+				stability_factor = -0.05
+			}
+		}
+	
+		AIR_State = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				has_autonomy_state = autonomy_AIR_state
+			}
+
+			available = {
+				always = yes
+			}
+
+			cancel = {
+				not = {
+					has_autonomy_state = autonomy_AIR_state
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1200
+			
+			modifier = {
+				political_power_gain = 0.01
+				command_power_gain_mult 0.05
+				drift_defence_factor = 0.35
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				supply_factor = 0.1
+				hidden_modifier = {
+					local_intel_to_enemies = -0.05
+					army_org_regain = 0.01
+					coordination_bonus = 0.02
+					justify_war_goal_time = 0.2
+					ai_focus_defense_factor = 0.5
+					ai_focus_aggressive_factor = -0.5
+					ai_focus_peaceful_factor = 0.75
+					ai_focus_war_production_factor = -0.75
+				}
+			}
+		}
+		
+		FMP_State = {
+			picture = usa_great_depression_3
+			
+			allowed = {
+				has_autonomy_state = autonomy_FMP_state
+			}
+
+			available = {
+				always = yes
+			}
+
+			cancel = {
+				not = {
+					has_autonomy_state = autonomy_FMP_state
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1200
+			
+			modifier = {
+				political_power_cost = 0.01
+				command_power_gain_mult -0.03
+				drift_defence_factor = 0.1
+				stability_factor = -0.01
+				war_support_factor = -0.01
+				hidden_modifier = {
+					coordination_bonus = -0.01
+					justify_war_goal_time = 0.1
+					ai_focus_defense_factor = 0.3
+					ai_focus_aggressive_factor = -0.3
+					ai_focus_peaceful_factor = 0.5
+					ai_focus_war_production_factor = -0.3
+				}
+			}
+		}
+	}
+}

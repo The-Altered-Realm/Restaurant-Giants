@@ -1,0 +1,503 @@
+characters={
+	CRS_rafael_pescardo={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CRS_rafael_escardo
+			ledger = army
+				allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Rafael Pescardo"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	CRS_alberto_lopez_florez={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CRS_alberto_lopez_florez
+			ledger = air
+				allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					air_airborne_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Alberto Lopez Florez"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	CRS_oscar_gillardi={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CRS_oscar_gillardi
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					army_chief_drill_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Oscar Gillardi"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_5"
+			}
+		}
+	}
+	CRS_felipe_tudeila={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CRS_felipe_tudeila
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					navy_chief_commerce_raiding_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Felipe Tudeila"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_3"
+			}
+		}
+	}
+	CRS_eduardo_cantobria_gomez={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CRS_eduardo_cantobria_gomez
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					air_chief_reform_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Eduardo Cantobria Gomez"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_2"
+			}
+		}
+	}
+	CRS_ernesto_scrothe={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CRS_ernesto_scrothe
+			ledger = navy
+				allowed = {
+					original_tag = CRS
+				}
+				
+				traits = {
+					naval_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Ernesto Scrothe"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+	CRS_luis_ramirez_ortiza={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CRS_luis_ramirez_ortiza
+			ledger = army
+				allowed = {
+					original_tag = CRS
+				}
+				
+				traits = {
+					military_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Luis Ramírez Ortiza"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_1"
+			}
+		}
+	}
+	CRS_oscar_benavidis_larrea={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CRS_oscar_benavidis_larrea
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					army_chief_defensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Oscar Benavidis Larrea"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	CRS_manuel_odria_amaretti={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CRS_manuel_odria_amaretti
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					army_chief_organizational_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Manuel Odria Amaretti"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_2"
+			}
+		}
+	}
+	CRS_luis_navorrete={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CRS_luis_navorrete
+			ledger = air
+				allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					navy_carrier_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Luis Navorreté"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_1"
+			}
+		}
+	}
+	CRS_paul_de_beaudez={
+		advisor={
+			
+			
+			slot = air_chief
+			idea_token = CRS_paul_de_beaudez
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					air_chief_safety_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Paul de Beaudez"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_3"
+			}
+		}
+	}
+	CRS_alberto_roque_saldiaz={
+		advisor={
+			
+			
+			slot = navy_chief
+			idea_token = CRS_alberto_roque_saldiaz
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					navy_chief_decisive_battle_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Alberto Roque Saldíaz"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_south_america_2"
+			}
+		}
+	}
+	CRS_vladimiro_lopez_trigozo={
+		advisor={
+			
+			
+			slot = army_chief
+			idea_token = CRS_vladimiro_lopez_trigozo
+			allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Vladimiro Lopéz Trigozo"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_3"
+			}
+		}
+	}
+	CRS_eloy_g_uretta={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CRS_eloy_g_uretta
+			ledger = army
+				allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					army_logistics_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Eloy G. Uretta"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_1"
+			}
+		}
+	}
+	CRS_fernando_m_quesado_blanco={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CRS_fernando_m_quesado_blanco
+			ledger = air
+				allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					air_strategic_bombing_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Fernando M. Quesado Blanco"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	CRS_eduardo_montero_rojos={
+		advisor={
+			
+			
+			slot = high_command
+			idea_token = CRS_eduardo_montero_rojos
+			ledger = army
+				allowed = {
+					original_tag = CRS
+				}
+				traits = {
+					army_armored_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Eduardo Montero Rojos"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_south_america_4"
+			}
+		}
+	}
+	CRS_romulo_fria={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = CRS_romulo_fria
+			ledger = air
+				allowed = {
+					original_tag = CRS
+				}
+				
+				traits = {
+					air_warfare_theorist
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Romulo Fria"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_south_america_1"
+			}
+		}
+	}
+	CRS_oscar_miro_quesoda={
+		advisor={
+			slot = political_advisor
+			idea_token = CRS_oscar_miro_quesoda
+			allowed  = {
+					original_tag = CRS
+				}
+				traits  = {
+					silent_workhorse 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Oscar Miro Quesoda"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_2"
+			}
+		}
+	}
+	CRS_jose_bustamante_y_rivera={
+		advisor={
+			slot = political_advisor
+			idea_token = CRS_jose_bustamante_y_rivera
+			allowed  = {
+					original_tag = CRS
+				}
+				traits  = {
+					compassionate_gentleman 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="José Bustamante y Rivera"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_3"
+			}
+		}
+	}
+	CRS_armando_reveredo_iglesiase={
+		advisor={
+			slot = political_advisor
+			idea_token = CRS_armando_reveredo_iglesiase
+			allowed  = {
+					original_tag  = CRS
+				}
+				traits  = {
+					war_industrialist 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Armando Reveredo Iglesiase"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+	CRS_reynaldo_venatea={
+		advisor={
+			slot = political_advisor
+			idea_token = CRS_reynaldo_venatea
+			allowed  = {
+					original_tag = CRS
+				}
+				traits  = {
+					ideological_crusader 
+				}
+		}
+# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
+		name="Reynaldo Venatea"
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+	}
+}

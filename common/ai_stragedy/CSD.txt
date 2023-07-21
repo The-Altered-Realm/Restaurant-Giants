@@ -1,0 +1,48 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+ai_strategy = {
+	type = befriend
+	id = "USA"
+	value = 30
+	}
+ai_strategy = {
+	type = befriend
+	id = "CAN"
+	value = 35
+}
+
+ai_strategy = {
+    type = ignore_claim
+    id = CAN
+    value = 125
+}
+ai_strategy = {
+    type = ignore_claim
+    id = USA
+    value = 160
+}
+
+USA = {
+	ai_strategy = {
+	type = befriend
+	id = "CSD"
+	value = 60
+}
+}
+CAN = {
+	ai_strategy = {
+	type = befriend
+	id = "CSD"
+	value = 70
+}
+}

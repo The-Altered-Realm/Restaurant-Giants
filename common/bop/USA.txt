@@ -1,0 +1,176 @@
+
+USA_values_power_balance = {
+	initial_value = 0.56
+	left_side = USA_western_values
+	right_side = USA_christian_values
+	decision_category = USA_values_category
+
+
+	### Western Democracy
+	side = {
+		id = USA_western_values	
+		icon = GFX_bop_ITA_grand_council_side
+
+		range = {
+			id = USA_western_values_high
+			min = -1.00
+			max = -0.84
+			modifier = {
+				add_war_support = 0.05
+				add_stability = -0.03
+				planning_speed = 0.03
+				offence = 0.03
+				political_power_factor = -0.01
+				democratic_acceptance = 10
+			}
+			on_activate = {
+				add_temporary_buff_to_units = {
+					army_org_factor = -0.01
+					hours = 72
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+		
+		range = {
+			id = USA_western_values_mid
+			min = -0.84
+			max = -0.50
+			modifier = {
+				add_war_support = 0.04
+				add_stability = -0.02
+				planning_speed = 0.02
+				offence = 0.02
+				political_power_factor = -0.02
+				democratic_acceptance = 5
+			}
+			on_activate = {
+				add_temporary_buff_to_units = {
+					army_org_factor = -0.01
+					hours = 48
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+		
+		range = {
+			id = USA_western_values_low
+			min = -0.50
+			max = -0.16
+			modifier = {
+				add_war_support = 0.02
+				add_stability = -0.01
+				planning_speed = 0.01
+				offence = 0.01
+				political_power_factor = -0.03
+			}
+			on_activate = {
+				add_temporary_buff_to_units = {
+					army_org_factor = -0.01
+					hours = 24
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}
+
+
+	### Neutral status
+	range = {
+		id = USA_values_balance_range
+		min = -0.16
+		max = 0.16
+		modifier = {
+			army_org_regain = 0.01
+			dig_in_speed_factor 0.01
+			political_power_factor = -0.04
+		}
+		on_activate = {
+			
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+
+	### Biblical Republic
+	side = {
+		id = USA_christian_values
+		icon = GFX_bop_ITA_mussolini_side
+
+		range = {
+			id = USA_christian_values_low
+			min = 0.16
+			max = 0.50
+			modifier = {
+				add_stability = 0.2
+				army_morale_factor = 0.01
+				political_power_factor = -0.05
+				defence = 0.01
+			}
+			on_activate = {
+				add_temporary_buff_to_units = {
+					army_strength_factor = -0.01
+					hours = 18
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+		
+		range = {
+			id = USA_christian_values_mid
+			min = 0.50
+			max = 0.84
+			modifier = {
+				add_stability = 0.4
+				add_war_support = -0.01
+				army_morale_factor = 0.02
+				defence = 0.02
+				political_power_factor = -0.06
+				democratic_acceptance = -5
+			}
+			on_activate = {
+				add_temporary_buff_to_units = {
+					army_strength_factor = -0.01
+					hours = 38
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+		
+		range = {
+			id = USA_christian_values_high
+			min = 0.84
+			max = 1.00
+			modifier = {
+				add_stability = 0.7
+				add_war_support = -0.02
+				army_morale_factor = 0.04
+				defence = 0.03
+				political_power_factor = -0.07
+				democratic_acceptance = -5
+			}
+			on_activate = {
+				add_temporary_buff_to_units = {
+					army_strength_factor = -0.01
+					hours = 58
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}
+}
+

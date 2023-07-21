@@ -1,0 +1,96 @@
+#####################################################################################################################
+# COMMENTS HAVE BEEN INCLUDED FOR SAKE OF EXPLANATION, CAN BE REMOVED #
+# ID's must not include spaces!
+#####################################################################################################################
+simple_category = {
+	priority = 9		#Determines the order of display in the decisions tab, the higher the number, the higher it will show up.
+	icon = GFX_category_icon	#Icon to be used for the category, defined in decisions_graphics.gfx or other .gfx file you create
+	
+	allowed = {
+		always = yes
+	}
+	visible = {		#Determines what makes this category visible, if a category is invisible decisions under that category also will not be visible to the AI/player.
+	}
+}
+
+legacy_of_new_peru = {
+	icon = GFX_decision_infiltrate_state
+	picture = GFX_category_image_template		#Left side picture to be used for the category, defined in decisions_graphics.gfx or other .gfx file you create. Category MUST have a description localisation for the image to show up.
+	priority = 10		#Determines the order of display in the decisions tab, the higher the number, the higher it will show up.
+	
+	allowed = {
+		always = yes
+	}
+	visible = {
+		original_tag = NPR
+	}
+}
+
+new_english_republic = {
+	icon = GFX_decision_infiltrate_state
+	picture = GFX_category_image_template		#Left side picture to be used for the category, defined in decisions_graphics.gfx or other .gfx file you create. Category MUST have a description localisation for the image to show up.
+	priority = 10		#Determines the order of display in the decisions tab, the higher the number, the higher it will show up.
+	
+	allowed = {
+		always = yes
+	}
+	visible = {
+		original_tag = NEG
+	}
+}
+
+USA_values_category = {
+	icon = GFX_decision_infiltrate_state
+	picture = GFX_category_image_template		#Left side picture to be used for the category, defined in decisions_graphics.gfx or other .gfx file you create. Category MUST have a description localisation for the image to show up.
+	priority = 8		#Determines the order of display in the decisions tab, the higher the number, the higher it will show up.
+	
+	allowed = {
+		has_idea = biblical_constitution
+		has_idea = nation_of_the_new_testament
+	}
+	visible = {
+		or = {
+			has_government = democratic
+			democratic > 0.59
+		}
+	}
+}
+
+turkish_troubles = {
+	icon = GFX_category_icon
+	priority = 7	
+	
+	allowed = {
+		always = yes
+	}
+	visible = {
+		original_tag = GRE
+	}
+	
+	visible_when_empty = no
+
+	on_map_area = {
+		state = 341
+		name = map_icon_strip_localisation		#A localisation entry for the magnifying glass strip, defined in a localisation file.
+		zoom = 80
+	}
+}
+
+category_with_map_icon = {		#This is the type of category used for the spanish civil war.
+	icon = GFX_category_icon
+	priority = 8		#Determines the order of display in the decisions tab, the higher the number, the higher it will show up.	
+	
+	allowed = {
+		always = yes
+	}
+	visible = {
+	}
+	
+	visible_when_empty = yes		#Determines if the map icon will show up even if there are no active decisoins for this category.
+
+	on_map_area = {		#Determiens the states the map will zoom to when the magnifying glass icon is clicked.
+		state = 318
+		name = map_icon_strip_localisation		#A localisation entry for the magnifying glass strip, defined in a localisation file.
+		zoom = 100		#Determines how closely the camera will zoom to the state, the lower the number the closer it will zoom in.
+	}
+}

@@ -1,0 +1,320 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# send_volunteers_desire
+
+
+ai_strategy = {
+	type = befriend
+	id = "ITA"
+	value = 15
+}
+ai_strategy = {
+	type = befriend
+	id = "GER"
+	value = 10
+}
+ai_strategy = {
+	type = befriend
+	id = "BUL"
+	value = 5
+	
+
+ai_strategy = {
+	type = alliance
+	id = "ITA"
+	value = 10
+}
+ai_strategy = {
+	type = support
+	id = "GER"
+	value = 5
+}
+ai_strategy = {
+	type = support
+	id = "ITA"
+	value = 15
+}
+
+TUR_wqt = {
+
+
+}
+
+
+##############################################################################
+
+TUR_GRE_wj = {
+	allowed = {
+		original_tag = TUR
+		if = {
+			limit = { has_start_date < 1936.1.2.12 }
+			date < 1936.1.2.12
+		}
+		if = {
+			limit = { has_start_date > 1939.8.13.12 }
+			date > 1939.8.13.12
+		}
+		GRE = { owns_state = 341 }
+		date < 1949.6.1.12
+	}
+	enable = {
+		GRE = { owns_state = 341 }
+	}
+	abort = {
+		or = {
+			and = {
+				not = {
+					has_war_with = GRE
+				}
+				owns_state = 341
+			}
+			not = {
+				GRE = { owns_state = 341 }
+			}
+			date > 1949.6.1.12
+		}
+	}
+
+	targeted_modifier = {
+		tag = GRE
+		generate_wargoal_tension_against = -0.2
+	}
+}
+
+
+TUR_europe_axis_f1 = {
+	allowed = {
+		original_tag = TUR
+		GER = {
+			has_government = fascism
+		}
+	}
+	enable = {
+		has_government = fascism
+	}
+	abort = {
+		not = { has_government = fascism }
+	}
+
+ai_strategy = {
+	type = befriend
+	id = "GER"
+	value = 125
+}
+ai_strategy = {
+	type = alliance
+	id = "GER"
+	value = 85
+}
+ai_strategy = {
+	type = support
+	id = "GER"
+	value = 35
+}
+}
+
+TUR_europe_axis_f2 = {
+	allowed = {
+		original_tag = TUR
+		ITA = {
+			has_government = fascism
+		}
+	}
+	enable = {
+		has_government = fascism
+	}
+	abort = {
+		not = { has_government = fascism }
+	}
+
+ai_strategy = {
+	type = befriend
+	id = "ITA"
+	value = 150
+}
+ai_strategy = {
+	type = alliance
+	id = "ITA"
+	value = 95
+}
+ai_strategy = {
+    type = support
+    id = "ITA"
+    value = 100
+}
+
+}
+
+TUR_europe_axis_f3 = {
+	allowed = {
+		original_tag = TUR
+		is_in_faction_with = GER
+		is_in_faction_with = ITA
+		HUN = {
+			has_government = fascism
+		}
+		has_government = fascism
+	}
+	enable = {
+		is_in_faction_with = GER
+		is_in_faction_with = ITA
+	}
+	abort = {
+		not = { has_government = fascism }
+	}
+
+ai_strategy = {
+	type = befriend
+	id = "HUN"
+	value = 70
+}
+}
+
+TUR_europe_axis_f4 = {
+	allowed = {
+		original_tag = TUR
+		ROM = {
+			has_government = fascism
+		}
+		has_government = fascism
+	}
+	enable = {
+		is_in_faction_with = GER
+		is_in_faction_with = ITA
+	}
+	abort = {
+		not = { has_government = fascism }
+	}
+
+ai_strategy = {
+	type = befriend
+	id = "ROM"
+	value = 35
+}
+}
+
+TUR_europe_axis_f5 = {
+	allowed = {
+		original_tag = TUR
+		BUL = {
+			has_government = fascism
+		}
+	}
+	enable = {
+		has_government = fascism
+	}
+	abort = {
+		not = { has_government = fascism }
+	}
+
+ai_strategy = {
+	type = befriend
+	id = "BUL"
+	value = 85
+}
+ai_strategy = {
+	type = alliance
+	id = "BUL"
+	value = 55
+}
+}
+
+italian_greece_war_support = {
+	allowed = {
+		original_tag = TUR
+	}
+	enable = {
+		country_exists = GRE
+		country_exists = ITA
+		ITA = {
+			has_governemnt = fascism
+			has_war_with = GRE
+		}
+		NOT = {
+			is_in_faction_with = ITA
+		}
+	}
+	abort = {
+		NOT = {
+			ITA = {
+				has_war_with = GRE
+			}
+		}
+		OR = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "GRE"
+		value = 135
+	}
+	ai_strategy = {
+		type = conquer
+		id = "GRE"
+		value = 85
+	}
+	ai_strategy = {
+		type = support
+		id = "ITA"
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ITA"
+		value = 125
+	}
+	
+}
+
+##############################################################################
+
+
+TUR_make_nice_with_the_soviets = {
+	allowed = {
+		original_tag = TUR
+		has_dlc = "Battle for the Bosporus"
+	}
+	enable = {
+		has_completed_focus = TUR_the_batumi_accord
+		SOV = { 
+			has_opinion	= {
+				target = ROOT
+				value < 75
+			}
+		}
+		has_political_power > 100
+	}
+	abort = {
+		SOV = {
+			OR = {
+				exists = no
+				has_war_with = ROOT
+				is_subject = yes
+				has_opinion	= {
+					target = ROOT
+					value > 100
+				}
+			}
+		}
+		has_political_power < 50
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = SOV
+		value = 200
+	}
+}

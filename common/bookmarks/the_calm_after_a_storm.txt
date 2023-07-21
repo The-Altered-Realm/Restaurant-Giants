@@ -1,0 +1,20 @@
+bookmarks = {
+	bookmark = {
+		name = "The Calm After a Storm"
+		desc = "calm_after_a_storm_desc"
+		date = 1948.12.31.12
+		picture = "GFX_select_date_1950"
+		default_country = "CHI"
+		
+		#ideas are only display
+		
+		CHI = {
+			history = CHI_1950_desc
+		}
+		
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

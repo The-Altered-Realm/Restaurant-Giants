@@ -1,0 +1,116 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+ai_strategy = {
+	type = befriend
+	id = "USA"
+	value = 65
+	}
+ai_strategy = {
+	type = befriend
+	id = "CAN"
+	value = 25
+}
+ai_strategy = {
+	type = befriend
+	id = "IRE"
+	value = 10
+}
+
+ai_strategy = {
+    type = ignore_claim
+    id = USA
+    value = 100
+}
+ai_strategy = {
+    type = ignore_claim
+    id = CAN
+    value = 120
+}
+
+USA = {
+	ai_strategy = {
+	type = befriend
+	id = "NEG"
+	value = 80
+}
+}
+CAN = {
+	ai_strategy = {
+	type = befriend
+	id = "NEG"
+	value = 55
+}
+
+
+CSD_irish_supremacy = {
+	allowed = {
+		original_tag = NEG
+	}
+	enable = {
+		has_government = fascism
+	}
+	abort = {
+		IRE = {
+			has_government = fascism
+			has_government = communism
+		}
+		NOT = {
+			has_government = fascism
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = IRE
+		value = 160
+	}
+	ai_strategy = {
+		type = alliance
+		id = IRE
+		value = 50
+	}
+}
+
+CSD_f_irish_alliance = {
+	allowed = {
+		original_tag = NEG
+	}
+	enable = {
+		has_government = fascism
+		IRE = {
+			has_government = fascism
+		}
+	}
+	abort = {
+		IRE = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+		NOT = {
+			has_government = fascism
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = IRE
+		value = 300
+	}
+	ai_strategy = {
+		type = alliance
+		id = IRE
+		value = 165
+	}
+}
+
